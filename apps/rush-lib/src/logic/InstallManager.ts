@@ -951,6 +951,9 @@ export class InstallManager {
                 // install. If the installation fails again, rush purge may be used to clear
                 // the common/temp folder.
 
+                console.log(colors.yellow(`Note: The pnpm-store was not deleted. ` +
+                  `If rush install fails again, run 'rush purge' to delete the pnpm-store also.`));
+
                 Utilities.createFolderWithRetry(commonNodeModulesFolder);
               }
             });
